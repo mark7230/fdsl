@@ -18,14 +18,14 @@ export default function Signup() {
 
     try {
       // 1️⃣ Register user
-      await api.post("/auth/register", {
+      await api.post("/api/auth/register", {
         name,
         email,
         password,
       });
 
       // 2️⃣ Auto-login after signup
-      const res = await api.post("/auth/login", {
+      const res = await api.post("/api/auth/login", {
         email,
         password,
       });
